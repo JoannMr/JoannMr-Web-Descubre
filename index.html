@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Descubre España</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+</head>
+
+<body>
+    <h1>Descubre España</h1>
+    <!-- Botón para abrir el modal -->
+    <button id="info-button">¿Cómo funciona?</button>
+
+    <form id="search-form">
+        <label>Comunidad: </label>
+        <select name="ccaa" id="ccaa">
+            <option value="" disabled selected>Selecciona una opción</option>
+        </select><br><br>
+        <label>Provincia: </label>
+        <select name="provincia" id="provincia">
+            <option value="" disabled selected>Selecciona una opción</option>
+        </select><br><br>
+        <label>Población: </label>
+        <select name="poblacion" id="poblacion">
+            <option value="" disabled selected>Selecciona una opción</option>
+        </select><br><br>
+        <input type="submit" value="BUSCAR" id="submit">
+    </form>
+
+    <div id="population-info" class="info-box"></div>
+    <div id="weather-info" class="info-box"></div>
+    <div id="image-container"></div>
+    <div id="map-container">
+        <div id="mapid"></div>
+    </div>
+
+    <!-- Modal -->
+    <div id="info-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>¿Cómo funciona esta web?</h2>
+            <p>
+                Esta web te permite explorar información detallada sobre cualquier población de España. 
+                Para comenzar, sigue estos pasos:
+            </p>
+            <ol>
+                <li>
+                    <strong>Selecciona una Comunidad Autónoma</strong>: Elige una comunidad de la lista desplegable.
+                </li>
+                <li>
+                    <strong>Selecciona una Provincia</strong>: Una vez seleccionada la comunidad, elige una provincia.
+                </li>
+                <li>
+                    <strong>Selecciona una Población</strong>: Finalmente, selecciona la población que deseas explorar.
+                </li>
+                <li>
+                    <strong>Haz clic en "BUSCAR"</strong>: La web te mostrará información sobre la población, 
+                    incluyendo datos de Wikipedia, el clima actual, imágenes relacionadas y un mapa interactivo.
+                </li>
+                <li>
+                    <strong>Búsqueda por voz</strong>: También puedes utilizar el botón de búsqueda por voz para 
+                    seleccionar la comunidad, provincia y población hablando.
+                </li>
+            </ol>
+            <p>
+                ¡Es así de sencillo! Explora y descubre todo lo que necesitas saber sobre cualquier población de España.
+            </p>
+    
+            <h2>APIs Utilizadas</h2>
+            <ul>
+                <li>
+                    <strong>Wikipedia API</strong>: 
+                    <p>
+                        Utilitzem l'API de Wikipedia per obtenir informació detallada sobre la població seleccionada. 
+                        Quan l'usuari tria una població, fem una consulta a l'API per obtenir un resum introductori 
+                        (extracte) de la pàgina de Wikipedia corresponent.
+                    </p>
+                </li>
+                <li>
+                    <strong>Open-Meteo API</strong>: 
+                    <p>
+                        Aquesta API ens proporciona dades meteorològiques en temps real. Utilitzem les coordenades 
+                        de la població seleccionada per obtenir la temperatura actual i la velocitat del vent.
+                    </p>
+                </li>
+                <li>
+                    <strong>Wikimedia Commons API</strong>: 
+                    <p>
+                        Amb aquesta API, obtenim imatges relacionades amb la població seleccionada. Les imatges 
+                        es mostren en una galeria perquè l'usuari pugui veure aspectes visuals del lloc.
+                    </p>
+                </li>
+                <li>
+                    <strong>Nominatim (OpenStreetMap)</strong>: 
+                    <p>
+                        Utilitzem Nominatim per obtenir les coordenades geogràfiques (latitud i longitud) de la 
+                        població seleccionada. Aquestes coordenades es fan servir per mostrar un mapa interactiu 
+                        amb la ubicació exacta.
+                    </p>
+                </li>
+                <li>
+                    <strong>Web Speech API</strong>: 
+                    <p>
+                        Aquesta API permet als usuaris realitzar cerques per veu. Quan l'usuari prem el botó de 
+                        "Buscar per veu", pot dir el nom de la comunitat autònoma, la província i la població 
+                        que vol explorar. El navegador reconeix la veu i completa automàticament els camps del 
+                        formulari.
+                    </p>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
