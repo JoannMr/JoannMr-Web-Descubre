@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guía Web Speech API</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Guía de Implementación de la Web Speech API</h1>
+    <section>
+        <h2>¿Qué es la Web Speech API?</h2>
+        <p>La <strong>Web Speech API</strong> es una API de navegador que permite el reconocimiento de voz y la síntesis de voz, facilitando la interacción por voz en aplicaciones web.</p>
+    </section>
+    <section>
+        <h2>¿Cómo se ha implementado en este proyecto?</h2>
+        <p>En el proyecto <strong>Descubre España</strong>, la Web Speech API se ha utilizado para permitir la selección de la comunidad autónoma, la provincia y la población mediante comandos de voz.</p>
+        <h3>Paso a paso:</h3>
+        <ol>
+            <li><strong>Creación del botón de búsqueda por voz:</strong> Se ha añadido un botón con un icono de micrófono en el formulario principal.</li>
+            <li><strong>Configuración del reconocimiento de voz:</strong> Se ha utilizado el objeto <code>SpeechRecognition</code> para capturar el audio del usuario.</li>
+            <li><strong>Normalización del texto:</strong> Se han eliminado acentos y caracteres especiales para mejorar la precisión.</li>
+            <li><strong>Uso de la síntesis de voz:</strong> Se ha guiado al usuario a través de mensajes hablados usando <code>SpeechSynthesisUtterance</code>.</li>
+            <li><strong>Procesamiento de los resultados:</strong> El texto reconocido se ha comparado con las opciones disponibles en los selectores del formulario.</li>
+        </ol>
+    </section>
+    <section>
+        <h2>Ejemplo de Código</h2>
+        <pre><code>const recognition = new (window.SpeechRecognition || window.webkitSpeechRecognition)();
+recognition.lang = "es-ES";
+
+recognition.onresult = (event) => {
+    const transcript = event.results[0][0].transcript.toLowerCase();
+    console.log("Texto reconocido:", transcript);
+};
+
+recognition.start();</code></pre>
+    </section>
+    <section>
+        <h2>Enlaces Útiles</h2>
+        <ul>
+            <li><a href="https://developer.mozilla.org/es/docs/Web/API/Web_Speech_API" target="_blank">Documentación oficial de la Web Speech API</a></li>
+        </ul>
+    </section>
+    <a href="index.html" class="back-button">Volver a la página principal</a>
+</body>
+</html>
