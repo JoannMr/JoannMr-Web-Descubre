@@ -48,68 +48,22 @@
                 Para comenzar, sigue estos pasos:
             </p>
             <ol>
-                <li>
-                    <strong>Selecciona una Comunidad Autónoma</strong>: Elige una comunidad de la lista desplegable.
-                </li>
-                <li>
-                    <strong>Selecciona una Provincia</strong>: Una vez seleccionada la comunidad, elige una provincia.
-                </li>
-                <li>
-                    <strong>Selecciona una Población</strong>: Finalmente, selecciona la población que deseas explorar.
-                </li>
-                <li>
-                    <strong>Haz clic en "BUSCAR"</strong>: La web te mostrará información sobre la población, 
-                    incluyendo datos de Wikipedia, el clima actual, imágenes relacionadas y un mapa interactivo.
-                </li>
-                <li>
-                    <strong>Búsqueda por voz</strong>: También puedes utilizar el botón de búsqueda por voz para 
-                    seleccionar la comunidad, provincia y población hablando.
-                </li>
+                <li><strong>Selecciona una Comunidad Autónoma</strong>: Elige una comunidad de la lista desplegable.</li>
+                <li><strong>Selecciona una Provincia</strong>: Una vez seleccionada la comunidad, elige una provincia.</li>
+                <li><strong>Selecciona una Población</strong>: Finalmente, selecciona la población que deseas explorar.</li>
+                <li><strong>Haz clic en "BUSCAR"</strong>: La web te mostrará información sobre la población, incluyendo datos de Wikipedia, el clima actual, imágenes relacionadas y un mapa interactivo.</li>
+                <li><strong>Búsqueda por voz</strong>: También puedes utilizar el botón de búsqueda por voz para seleccionar la comunidad, provincia y población hablando.</li>
             </ol>
-            <p>
-                ¡Es así de sencillo! Explora y descubre todo lo que necesitas saber sobre cualquier población de España.
-            </p>
+            <p>¡Es así de sencillo! Explora y descubre todo lo que necesitas saber sobre cualquier población de España.</p>
     
             <h2>APIs Utilizadas</h2>
             <ul>
-                <li>
-                    <strong>Wikipedia API</strong>: 
-                    <p>
-                        Utilitzem l'API de Wikipedia per obtenir informació detallada sobre la població seleccionada. 
-                        Quan l'usuari tria una població, fem una consulta a l'API per obtenir un resum introductori 
-                        (extracte) de la pàgina de Wikipedia corresponent.
-                    </p>
-                </li>
-                <li>
-                    <strong>Open-Meteo API</strong>: 
-                    <p>
-                        Aquesta API ens proporciona dades meteorològiques en temps real. Utilitzem les coordenades 
-                        de la població seleccionada per obtenir la temperatura actual i la velocitat del vent.
-                    </p>
-                </li>
-                <li>
-                    <strong>Wikimedia Commons API</strong>: 
-                    <p>
-                        Amb aquesta API, obtenim imatges relacionades amb la població seleccionada. Les imatges 
-                        es mostren en una galeria perquè l'usuari pugui veure aspectes visuals del lloc.
-                    </p>
-                </li>
-                <li>
-                    <strong>Nominatim (OpenStreetMap)</strong>: 
-                    <p>
-                        Utilitzem Nominatim per obtenir les coordenades geogràfiques (latitud i longitud) de la 
-                        població seleccionada. Aquestes coordenades es fan servir per mostrar un mapa interactiu 
-                        amb la ubicació exacta.
-                    </p>
-                </li>
-                <li>
-                    <strong>Web Speech API</strong>: 
-                    <p>
-                        Aquesta API permet als usuaris realitzar cerques per veu. Quan l'usuari prem el botó de 
-                        "Buscar per veu", pot dir el nom de la comunitat autònoma, la província i la població 
-                        que vol explorar. El navegador reconeix la veu i completa automàticament els camps del 
-                        formulari.
-                    </p>
+                <li><strong>Wikipedia API</strong>: <p>Utilizamos la API de Wikipedia para obtener información detallada sobre la población seleccionada.</p></li>
+                <li><strong>Open-Meteo API</strong>: <p>Proporciona datos meteorológicos en tiempo real usando las coordenadas de la población seleccionada.</p></li>
+                <li><strong>Wikimedia Commons API</strong>: <p>Obtenemos imágenes relacionadas con la población seleccionada para mostrarlas en la galería.</p></li>
+                <li><strong>Nominatim (OpenStreetMap)</strong>: <p>Permite obtener las coordenadas geográficas de la población y mostrar el mapa interactivo.</p></li>
+                <li><strong>Web Speech API</strong>: <p>Facilita la búsqueda por voz para seleccionar la comunidad, provincia y población mediante comandos de voz.</p>
+                    <a href="guia.html" class="guide-button">Ver guía completa de la Web Speech API</a>
                 </li>
             </ul>
         </div>
