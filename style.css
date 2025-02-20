@@ -287,3 +287,79 @@ input[type="submit"]:hover {
     transform: scale(0.5);
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
+
+
+section {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    max-width: 800px;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+section h2 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    color: #ff6f61;
+}
+
+section p, section ol, section pre {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #fff;
+}
+
+ol li {
+    margin-bottom: 10px;
+}
+
+pre {
+    background: rgba(0, 0, 0, 0.8);
+    padding: 10px;
+    border-radius: 8px;
+    overflow-x: auto;
+}
+
+pre code {
+    color: #ff6f61;
+    font-family: "Courier New", monospace;
+}
+
+a.back-button {
+    background-color: #ff6f61;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+    font-size: 16px;
+    text-decoration: none;
+    transition: background 0.3s ease;
+}
+
+a.back-button:hover {
+    background-color: #e65c50;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul li {
+    margin-bottom: 10px;
+}
+
+ul li a {
+    color: #ff6f61;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+ul li a:hover {
+    text-decoration: underline;
+}
